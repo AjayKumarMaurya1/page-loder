@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loder</title>
+    <style>
+        .loder {
+            width: 200px;
+            height: 200px;
+            border: 6px solid rgba(112, 110, 110, 0.733);
+            border-top: 6px solid #c529c5;
+            background: transparent;
+            border-radius: 50%;
+            margin: 100px auto;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+            position: absolute;
+            left: 40%;
+            z-index: 1;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .wapper {
+            position: relative;
+            -webkit-animation-name: wapper;
+            -webkit-animation-duration: 1s;
+            animation-name: wapper;
+            animation-duration: 1s;
+        }
+
+        @-webkit-keyframes wapper {
+            form {
+                bottom: -100px;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes wapper {
+            form {
+                bottom: -100px;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+
+        .wapper {
+            width: 1400px;
+            margin: 0 auto;
+            display: none;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        button {
+            width: 100px;
+
+        }
+    </style>
+</head>
+
+<body onload="myfunction()">
+    <div class="loder" id="loder"></div>
+
+    <div class="wapper" id="wapper">
+        <header>
+            <img src="https://picsum.photos/536/354" alt=" eror">
+            <h1>welcome</h1>
+            <input type="text">
+            <button> click me!</button>
+        </header>
+
+    </div>
+</body>
+<script>
+    var x;
+    function myfunction() {
+        a = setTimeout(showPage, 3000);
+    }
+    function showPage() {
+        //     document.querySelector(".loder").style.display = "none";
+        //     document.querySelector(".wapper").style.display = "block";
+        document.getElementById("loder").style.display = "none";
+        document.getElementById("wapper").style.display = "block";
+
+
+    }
+
+
+
+</script>
+
+</html>
